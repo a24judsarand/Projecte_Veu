@@ -1,79 +1,79 @@
-# Vuetify (Default)
+# Projecte Veu  
+  
+Aplicació d'escriptori amb control per veu en català, desenvolupada amb Vue.js 3 i Electron.  
+  
+## 🎯 Descripció  
+  
+El **Projecte Veu** és una aplicació d'escriptori multiplataforma que combina les tecnologies web de Vue.js amb un contenidor Electron per oferir una experiència d'usuari controlada per veu. L'aplicació demostra pràctiques modernes de desenvolupament Vue incloent registre automàtic de components, enrutament basat en fitxers i gestió d'estat reactiva, amb una interfície de comandaments de veu en català.  
+  
+## 🛠️ Tecnologies  
+  
+| Tecnologia | Versió | Propòsit |  
+|------------|---------|----------|  
+| **Vue.js** | 3.5.21 | Framework UI reactiu amb Composition API |  
+| **Vuetify** | 3.10.1 | Biblioteca de components Material Design |  
+| **Vue Router** | 4.5.1 | Enrutament client-side |  
+| **Pinia** | 3.0.3 | Gestió d'estat |  
+| **Electron** | 39.2.6 | Contenidor d'aplicació d'escriptori |  
+| **Vite** | 7.1.5 | Eina de construcció i servidor de desenvolupament |  
+  
+## 🎤 Comandaments de Veu  
+  
+L'aplicació reconeix els següents comandaments en català:  
+  
+- **"saluda"** - Mostra un salutació  
+- **"ajuda"** - Mostra l'ajuda  
+- **"Tema"** - Canvia el tema visual  
+- **"Reset"** - Reinicia la interfície  
+  
+## 📦 Instal·lació  
+  
+Instal·la les dependències amb el teu gestor de paquets preferit:  
+  
+ 
+# Amb npm  
+npm init -y
+npm install  
+  
+# Amb electron 
+npm install electron --save-dev
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+🚀 Desenvolupament
+Iniciar el servidor de desenvolupament
+npm run dev
+El servidor s'iniciarà a http://localhost:3000 amb recàrrega automàtica.
 
-## ❗️ Important Links
+Construir per a producció
+npm run build
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
+Executar l'aplicació d'escriptori
+npm run start
 
-## 💿 Install
+📁 Estructura del Projecte
+Projecte_Veu/  
+├── main.js                    # Procés principal d'Electron  
+├── index.html                 # Contenidor HTML  
+├── package.json              # Dependències i scripts  
+├── vite.config.js            # Configuració de Vite  
+├── src/  
+│   ├── main.js               # Arrencada de l'aplicació Vue  
+│   ├── App.vue               # Component arrel  
+│   ├── pages/                # Pàgines (auto-rutes)  
+│   │   └── index.vue         # Pàgina principal  
+│   ├── components/           # Components (auto-registrats)  
+│   │   ├── VoiceCommander.vue    # Control per veu  
+│   │   ├── AppFooter.vue         # Peu de pàgina  
+│   │   └── HelloWorld.vue        # Component de benvinguda  
+│   ├── layouts/              # Disposicions de pàgina  
+│   ├── composables/          # Funcions reutilitzables  
+│   │   └── useSpeechRecognition.js  # API de reconeixement de veu  
+│   ├── plugins/              # Registre de plugins Vue  
+│   └── styles/               # Estils globals  
+└── public/                   # Recursos estàtics  
 
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
-
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
-
-After completing the installation, your environment is ready for Vuetify development.
-    
-## ✨ Features
-
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
-
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
-
-## 💡 Usage
-
-This section covers how to start the development server and build your project for production.
-
-### Starting the Development Server
-
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
-
-```bash
-yarn dev
-```
-
-(Repeat for npm, pnpm, and bun with respective commands.)
-
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
-
-### Building for Production
-
-To build your project for production, use:
-
-```bash
-yarn build
-```
-
-(Repeat for npm, pnpm, and bun with respective commands.)
-
-Once the build process is completed, your application will be ready for deployment in a production environment.
-
-## 💪 Support Vuetify Development
-
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
-
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
-
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2016-present Vuetify, LLC
+✨ Característiques Destacades
+Control per Veu: Integració amb Web Speech API per al reconeixement de comandaments en català
+Auto-importació: Components i APIs de Vue s'importen automàticament
+Enrutament Automàtic: Les rutes es generen a partir de l'estructura de src/pages/
+Disseny Modern: Interfície Material Design amb Vuetify
+Multiplataforma: Funciona a Windows, macOS i Linux gràcies a Electron
