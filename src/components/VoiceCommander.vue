@@ -27,17 +27,16 @@ watch(transcript, (newText) => {
     uiMessage.value = "Aquesta és una prova de concepte.";
     statusColor.value = "info";
   }
-  else if (command.includes('Tema')) {
+  else if (command.includes('tema')) {
 
     uiMessage.value = "CANVIO DE TEMA";
     theme.toggle()
   }
-  else if (command.includes('Reset')) {
-    uiMessage.value = "Reset";
+  else if (command.includes('reset')) {
+    uiMessage.value = "Preme el botó per començar";
     statusColor.value = ref("primary");
 
   }
-
 
   //PROBAR  
   else {
